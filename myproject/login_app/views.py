@@ -23,7 +23,7 @@ def criar_usuarios(request):
 def login_usuario(request):
     if request.method == 'POST':
         username = request.POST.get('username')
-        senha = request.POST.get('senha')
+        senha = request.POST.get('password')
         if username and senha:
             user = authenticate(username=username, password=senha)
             if user:
